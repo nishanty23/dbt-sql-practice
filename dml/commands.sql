@@ -6,3 +6,5 @@ insert into department (id, name) select id, name from employee;
 
 update department set dept_name = 'R&D'
 where id = 1;
+
+select * from employee_backup order by id;
