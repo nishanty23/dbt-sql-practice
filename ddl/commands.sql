@@ -10,3 +10,6 @@ modify designation varchar(10);
 
 alter table employee
 change name emp_name varchar(25);
+
+alter table employee
+drop column experience;
