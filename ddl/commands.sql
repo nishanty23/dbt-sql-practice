@@ -13,3 +13,5 @@ change name emp_name varchar(25);
 
 alter table employee
 drop column experience;
+
+drop table employee;
