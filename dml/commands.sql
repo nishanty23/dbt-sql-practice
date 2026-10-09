@@ -8,3 +8,6 @@ update department set dept_name = 'R&D'
 where id = 1;
 
 select * from employee_backup order by id;
+
+select employee.id, employee.name, department.dept_name from employee, department
+where employee.id = department.id;
