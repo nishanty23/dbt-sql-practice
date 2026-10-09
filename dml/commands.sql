@@ -11,3 +11,5 @@ select * from employee_backup order by id;
 
 select employee.id, employee.name, department.dept_name from employee, department
 where employee.id = department.id;
+
+delete from employee_backup;
