@@ -7,3 +7,6 @@ add column experience int;
 
 alter table employee
 modify designation varchar(10);
+
+alter table employee
+change name emp_name varchar(25);
