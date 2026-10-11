@@ -15,6 +15,9 @@ order by date_of_birth ASC;
 select * from users
 order by name DESC;
 
+select * from users
+where date_of_birth between '1990-01-07' and '2000-01-07';
+
 select employee.id, employee.name, department.dept_name from employee, department
 where employee.id = department.id;
 
