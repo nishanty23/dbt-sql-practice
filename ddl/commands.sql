@@ -23,3 +23,5 @@ create table voters (
   city varchar(20) default 'Delhi',
   age int check (age >= 18)
 );
+
+rename table voters to electorate;
