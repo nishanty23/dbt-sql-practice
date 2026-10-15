@@ -17,11 +17,19 @@ drop column experience;
 drop table employee;
 
 create table voters (
-  voter_id int not null,
+  voter_id int primary key,
   name varchar(20) unique,
-  aadhar_id int primary key,
+  aadhar_id int not null,
   city varchar(20) default 'Delhi',
   age int check (age >= 18)
+);
+
+create table voterlist (
+  list_number int primary key,
+  occupation varchar(20),
+  voter_id int,
+  foreign key (voter_id)
+  references voters (voter_id)
 );
 
 rename table voters to electorate;
