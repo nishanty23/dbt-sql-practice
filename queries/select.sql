@@ -3,3 +3,6 @@ where marks > 80;
 
 SELECT * from student
 where city = 'delhi';
+
+SELECT * from student
+where age between 20 and 22;
