@@ -9,3 +9,8 @@ where age between 20 and 22;
 
 SELECT * from student
 where name like 'R%';
+
+SELECT * from student
+order by marks desc
+limit 3;
+
