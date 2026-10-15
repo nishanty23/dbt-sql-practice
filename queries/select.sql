@@ -14,3 +14,5 @@ SELECT * from student
 order by marks desc
 limit 3;
 
+SELECT * from student
+where phone is null;
