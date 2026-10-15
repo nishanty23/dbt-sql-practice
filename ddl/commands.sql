@@ -24,6 +24,12 @@ create table voters (
   age int check (age >= 18)
 );
 
-
+create table voterlist (
+  list_number int primary key,
+  occupation varchar(20),
+  voter_id int,
+  foreign key (voter_id)
+  references voters (voter_id)
+);
 
 rename table voters to electorate;
