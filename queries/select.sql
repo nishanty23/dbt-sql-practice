@@ -16,3 +16,8 @@ limit 3;
 
 SELECT * from student
 where phone is null;
+
+SELECT emp.name, manager.name
+from employee emp
+join employee manager
+on employee.manager_id = manager.manager_id;
