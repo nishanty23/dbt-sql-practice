@@ -47,3 +47,24 @@ END //
 DELIMITER ;
 
 CALL show_student(10);
+-----------------------------------------------------------------------------------------------------------
+/* 2) Write a procedure called:
+check_age
+
+It should:
+- accept p_age as an IN parameter
+- if age is 18 or more, display:
+Eligible */
+    
+DELIMITER //
+
+CREATE PROCEDURE check_age(IN p_age INT)
+BEGIN
+    IF p_age >= 18 THEN
+        SELECT 'Eligible';
+    END IF;
+END //
+
+DELIMITER ;
+
+CALL check_age(20);
