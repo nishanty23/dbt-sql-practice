@@ -31,3 +31,19 @@ END //
 DELIMITER ;
 
 CALL get_student_count();
+-----------------------------------------------------------------------------------------------------------
+/* 1) Write the syntax for creating and calling a procedure:
+show_student accepts a student ID and displays that student's record */
+
+DELIMITER //
+
+CREATE PROCEDURE show_student(IN p_id INT)
+BEGIN
+    SELECT *
+    FROM student
+    WHERE student_id = p_id;
+END //
+
+DELIMITER ;
+
+CALL show_student(10);
