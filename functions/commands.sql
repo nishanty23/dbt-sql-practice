@@ -15,6 +15,7 @@ call get_student_by_marks(87);
 +--------+-------+
 
 -----------------------------------------------------------------------------------------------------------
+
 DELIMITER //
 
 CREATE PROCEDURE get_student_count()
@@ -31,7 +32,9 @@ END //
 DELIMITER ;
 
 CALL get_student_count();
+
 -----------------------------------------------------------------------------------------------------------
+
 /* 1) Write the syntax for creating and calling a procedure:
 show_student accepts a student ID and displays that student's record */
 
@@ -47,7 +50,9 @@ END //
 DELIMITER ;
 
 CALL show_student(10);
+
 -----------------------------------------------------------------------------------------------------------
+
 /* 2) Write a procedure called:
 check_age
 
@@ -68,3 +73,19 @@ END //
 DELIMITER ;
 
 CALL check_age(20);
+
+-----------------------------------------------------------------------------------------------------------
+
+DELIMITER //
+
+CREATE TRIGGER prevent_salary_decrease
+BEFORE UPDATE ON employee
+FOR EACH ROW
+BEGIN
+    IF NEW.salary < OLD.salary THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Salary cannot be decreased';
+    END IF;
+END //
+
+DELIMITER ;
